@@ -49,3 +49,31 @@ export const company = [
   "login",
   "changelog",
 ];
+
+export const properties = [
+  {
+    icon: "h1.png",
+    title: "family house",
+    sub: "122",
+  },
+  {
+    icon: "h2.png",
+    title: "house and villa",
+    sub: "155",
+  },
+  {
+    icon: "h3.png",
+    title: "appartment",
+    sub: "243",
+  },
+  {
+    icon: "h4.png",
+    title: "office & studio",
+    sub: "532",
+  },
+  {
+    icon: "h6.png",
+    title: "villa & condo",
+    sub: "69",
+  },
+];

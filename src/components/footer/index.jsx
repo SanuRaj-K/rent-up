@@ -6,7 +6,7 @@ import { allSections, company, layouts } from "@/constants";
 export const Footer = () => {
   return (
     <div className="bg-[#1d2636]">
-      <section className="  py-10  fb flex-wrap  max-w-[80%] mx-auto ">
+      <section className="  py-10  px-5 md:px-0 fb flex-wrap w-full  md:max-w-[80%] mx-auto ">
         <div className=" mb-10 lg:mb-0">
           <div>
             <Image
@@ -26,7 +26,7 @@ export const Footer = () => {
               <input
                 type="text"
                 name="mail"
-                className=" w-[500px] rounded-md px-5 placeholder:text-black outline-none"
+                className=" w-full lg:w-[500px] rounded-md px-5 placeholder:text-black outline-none"
                 placeholder="Email address"
                 id="mail"
               />
