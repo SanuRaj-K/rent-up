@@ -1,8 +1,15 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import { properties, propertiesList } from "@/constants";
+import {
+  awards,
+  exploreLocation,
+  properties,
+  propertiesList,
+} from "@/constants";
 import { PropertyTypes } from "../property-types";
 import { PropertyList } from "../property-list";
+import { Award } from "../awards";
+import { ExploreLocation } from "../location";
 
 export const LandingPage = () => {
   return (
@@ -88,20 +95,70 @@ export const LandingPage = () => {
       <section>
         <div className=" text-center  py-16   w-full">
           <h1 className=" text-[35px]  font-semibold capitalize text-[#2d3954]">
-          Recent properties listed</h1>
+            Recent properties listed
+          </h1>
           <p className="  text-[#72809d] max-w-[700px] mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
           </p>
-          
         </div>
         <ul className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  place-items-center gap-11">
-            {propertiesList?.map((item, index)=>(
-                <li key={index}>
-                     <PropertyList address={item.address} image={item.image} name={item.name}price={item.price}status={item.status}type={item.type}/>
+          {propertiesList?.map((item, index) => (
+            <li key={index}>
+              <PropertyList
+                address={item.address}
+                image={item.image}
+                name={item.name}
+                price={item.price}
+                status={item.status}
+                type={item.type}
+              />
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className=" bg-[#122947] text-white py-20 ">
+        <div className="max-w-[80%] mx-auto">
+          <div className=" text-center">
+            <h1 className=" text-primary   capitalize ">our awards</h1>
+            <p className=" text-[24px] md:text-[30px] max-w-[700px] mx-auto">
+              Over 1,24,000+ Happy User Bieng With Us Still They Love Our
+              Services
+            </p>
+          </div>
+          <ul className=" mt-16 fb flex-wrap">
+            {awards?.map((item, index) => {
+              const IconComp = item.icon;
+              return (
+                <li className=" mb-5 md:mb-0" key={index}>
+                  <Award title={item.title} sub={item.sub} icon={IconComp} />
                 </li>
-            ))}
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h1>Explore By Location</h1>
+          <h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </h3>
+        </div>
+        <ul className=" grid grid-cols-3 place-items-center gap-5">
+          {exploreLocation?.map((item, index) => (
+            <li key={index}>
+              <ExploreLocation
+                index={index}
+                image={item.image}
+                city={item.title}
+                desc={item.desc}
+              />
+            </li>
+          ))}
         </ul>
       </section>
     </div>

@@ -38,11 +38,14 @@ export const PropertyList = ({ name, address, price, type, status, image }) => {
             <span>{address}</span>
           </span>
         </div>
-        <hr />
+        <div className=" py-4">
+        <hr className=" " />
+
+        </div>
         <div className=" fb items-center mt-5 px-2">
           <span className=" ">
             <span className="bg-primary px-5 py-3 rounded-3xl  text-[20px] font-bold text-white">{price}</span>
-            <span className=" text-[#2d3954]">/sqft</span>
+            <span className=" text-[#2d3954] ml-1">/sqft</span>
           </span>
           <span>{type}</span>
         </div>

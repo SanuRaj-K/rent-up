@@ -78,55 +78,114 @@ export const properties = [
   },
 ];
 
-
 export const propertiesList = [
-    {
-      name: "Brick Lane Realty",
-      address: "210 Montreal Road, Canada",
-      price: "$4,850",
-      type: "Commercial",
-      status: "For rent",
-      image: "p-1.png",
-    },
-    {
-      name: "Maple Grove Estates",
-      address: "15 King Street, Toronto, Canada",
-      price: "$3,200",
-      type: "Office Space",
-      status: "For sale",
-      image: "p-2.png",
-    },
-    {
-      name: "Downtown Loft Spaces",
-      address: "500 Queen Street, Ottawa, Canada",
-      price: "$2,750",
-      type: "Loft",
-      status: "For rent",
-      image: "p-7.png",
-    },
-    {
-      name: "Harborview Commercial",
-      address: "98 Bay Street, Vancouver, Canada",
-      price: "$5,100",
-      type: "Commercial",
-      status: "For sale",
-      image: "p-4.png",
-    },
-    {
-      name: "Sunset Office Tower",
-      address: "330 Sunset Blvd, Calgary, Canada",
-      price: "$4,500",
-      type: "Office Space",
-      status: "For rent",
-      image: "p-5.png",
-    },
-    {
-      name: "Riverfront Retail",
-      address: "120 Riverside Drive, Edmonton, Canada",
-      price: "$3,900",
-      type: "Retail",
-      status: "For sale",
-      image: "p-6.png",
-    },
-  ];
-  
+  {
+    name: "Brick Lane Realty",
+    address: "210 Montreal Road, Canada",
+    price: "$4,850",
+    type: "Commercial",
+    status: "For rent",
+    image: "p-1.png",
+  },
+  {
+    name: "Maple Grove Estates",
+    address: "15 King Street, Toronto, Canada",
+    price: "$3,200",
+    type: "Office Space",
+    status: "For sale",
+    image: "p-2.png",
+  },
+  {
+    name: "Downtown Loft Spaces",
+    address: "500 Queen Street, Ottawa, Canada",
+    price: "$2,750",
+    type: "Loft",
+    status: "For rent",
+    image: "p-7.png",
+  },
+  {
+    name: "Harborview Commercial",
+    address: "98 Bay Street, Vancouver, Canada",
+    price: "$5,100",
+    type: "Commercial",
+    status: "For sale",
+    image: "p-4.png",
+  },
+  {
+    name: "Sunset Office Tower",
+    address: "330 Sunset Blvd, Calgary, Canada",
+    price: "$4,500",
+    type: "Office Space",
+    status: "For rent",
+    image: "p-5.png",
+  },
+  {
+    name: "Riverfront Retail",
+    address: "120 Riverside Drive, Edmonton, Canada",
+    price: "$3,900",
+    type: "Retail",
+    status: "For sale",
+    image: "p-6.png",
+  },
+];
+
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
+export const awards = [
+  {
+    icon: EmojiEventsIcon,
+    title: "32M",
+    sub: "Blue Burmin Award",
+  },
+  {
+    icon: BusinessCenterIcon,
+    title: "53M",
+    sub: "Mimo X11 Award",
+  },
+  {
+    icon: LightbulbIcon,
+    title: "29M",
+    sub: "Australian UGC Award",
+  },
+  {
+    icon: FavoriteIcon,
+    title: "68M",
+    sub: "IITCA Green Award",
+  },
+];
+
+export const exploreLocation = [
+  {
+    image: "city",
+    title: "San Francisco, California",
+    desc: ["20 villas", "15 offices", "5 apartments"],
+  },
+  {
+    image: "city",
+    title: "Miami, Florida",
+    desc: ["18 villas", "12 offices", "8 apartments"],
+  },
+  {
+    image: "city",
+    title: "Seattle, Washington",
+    desc: ["14 villas", "10 offices", "7 apartments"],
+  },
+  {
+    image: "city",
+    title: "Austin, Texas",
+    desc: ["16 villas", "20 offices", "12 apartments"],
+  },
+  {
+    image: "city",
+    title: "Chicago, Illinois",
+    desc: ["25 villas", "18 offices", "14 apartments"],
+  },
+  {
+    image: "city",
+    title: "San Francisco, California",
+    desc: ["20 villas", "15 offices", "5 apartments"],
+  },
+];
