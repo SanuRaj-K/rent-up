@@ -1,12 +1,15 @@
+"use client";
 import { navLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 export const NavBar = () => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="  w-full px-10 md:px-0 md:max-w-[80%]  mx-auto bg-white">
+    <div className="  relative  w-full px-10 md:px-0 md:max-w-[80%]  mx-auto bg-white">
       <section className=" text-base  capitalize text-black font-medium py-5 fb items-center">
         <div>
           <Image
@@ -52,19 +55,30 @@ export const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div className=" lg:hidden">
-          <MenuIcon />
+        <div className=" block lg:hidden" onClick={() => setShowMenu((prev) => !prev)}>
+          {showMenu ? <CloseIcon /> : <MenuIcon />}
         </div>
 
         {/* Mobile Nav */}
-        <ul>
-          {navLinks.map((item, index) => (
-            <Link href={item.path} key={index}>
-              <li>{item.title}</li>
-            </Link>
-          ))}
-        </ul>
       </section>
+      <div className=" lg:hidden absolute right-0  px-10   bg-primary top-0">
+        {showMenu && (
+          <ul className=" relative  py-5  ">
+            <div
+              onClick={() => setShowMenu((prev) => !prev)}
+              className="  w-full absolute top-0 right-0"
+            >
+              {" "}
+              <CloseIcon />
+            </div>
+            {navLinks.map((item, index) => (
+              <Link className="   text-white " href={item.path} key={index}>
+                <li className=" mb-3 border-b-2 capitalize">{item.title}</li>
+              </Link>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };

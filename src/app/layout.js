@@ -1,11 +1,12 @@
- import { Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"], 
- });
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.className} antialiased`}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
