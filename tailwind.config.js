@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         poppins: ["poppins"],
       },
+      backgroundImage: {
+        landing: "url(/assets/images/banner.png)",
+      },
     },
   },
   plugins: [],
