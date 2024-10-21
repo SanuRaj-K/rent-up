@@ -1,7 +1,8 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import { properties } from "@/constants";
+import { properties, propertiesList } from "@/constants";
 import { PropertyTypes } from "../property-types";
+import { PropertyList } from "../property-list";
 
 export const LandingPage = () => {
   return (
@@ -62,7 +63,7 @@ export const LandingPage = () => {
           </div>
         </div>
       </section> */}
-      <section className=" py-20 bg-[#f7f9fc]">
+      <section className=" px-10 md:px-0 py-20 bg-[#f7f9fc]">
         <div className=" flex flex-col  items-center w-full mx-auto">
           <h1 className=" text-[35px] font-semibold">
             Featured Property Types
@@ -82,6 +83,25 @@ export const LandingPage = () => {
               />
             </li>
           ))}
+        </ul>
+      </section>
+      <section>
+        <div className=" text-center  py-16   w-full">
+          <h1 className=" text-[35px]  font-semibold capitalize text-[#2d3954]">
+          Recent properties listed</h1>
+          <p className="  text-[#72809d] max-w-[700px] mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+          
+        </div>
+        <ul className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  place-items-center gap-11">
+            {propertiesList?.map((item, index)=>(
+                <li key={index}>
+                     <PropertyList address={item.address} image={item.image} name={item.name}price={item.price}status={item.status}type={item.type}/>
+                </li>
+            ))}
         </ul>
       </section>
     </div>

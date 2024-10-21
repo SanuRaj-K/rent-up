@@ -77,3 +77,56 @@ export const properties = [
     sub: "69",
   },
 ];
+
+
+export const propertiesList = [
+    {
+      name: "Brick Lane Realty",
+      address: "210 Montreal Road, Canada",
+      price: "$4,850",
+      type: "Commercial",
+      status: "For rent",
+      image: "p-1.png",
+    },
+    {
+      name: "Maple Grove Estates",
+      address: "15 King Street, Toronto, Canada",
+      price: "$3,200",
+      type: "Office Space",
+      status: "For sale",
+      image: "p-2.png",
+    },
+    {
+      name: "Downtown Loft Spaces",
+      address: "500 Queen Street, Ottawa, Canada",
+      price: "$2,750",
+      type: "Loft",
+      status: "For rent",
+      image: "p-7.png",
+    },
+    {
+      name: "Harborview Commercial",
+      address: "98 Bay Street, Vancouver, Canada",
+      price: "$5,100",
+      type: "Commercial",
+      status: "For sale",
+      image: "p-4.png",
+    },
+    {
+      name: "Sunset Office Tower",
+      address: "330 Sunset Blvd, Calgary, Canada",
+      price: "$4,500",
+      type: "Office Space",
+      status: "For rent",
+      image: "p-5.png",
+    },
+    {
+      name: "Riverfront Retail",
+      address: "120 Riverside Drive, Edmonton, Canada",
+      price: "$3,900",
+      type: "Retail",
+      status: "For sale",
+      image: "p-6.png",
+    },
+  ];
+  
