@@ -220,12 +220,12 @@ export const LandingPage = () => {
           </ul>
         </div>
       </section>
-      {/* <section className="">
+      <section className="">
         <div className=" py-2  ">
         <ContactBottom/>
         </div>
        
-      </section> */}
+      </section>
     </div>
   );
 };
