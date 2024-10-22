@@ -10,7 +10,7 @@ function ContactBottom() {
         </div>
         <div>
           <div className=" text-[20px] mt-5 md:mt-0  px-7 cursor-pointer  text-primary     bg-white hover:border-none transition-all duration-300 text-center py-5  border-[#E5F5EC] border-[5px] rounded-full">
-            Contact Us Today
+            Contact Us Today 
           </div>
         </div>
       </div>
