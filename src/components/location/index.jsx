@@ -1,5 +1,4 @@
-import Image from "next/image";
-import React from "react";
+ import React from "react";
 
 export const ExploreLocation = ({ image, city, desc, index }) => {
   return (
@@ -12,11 +11,11 @@ export const ExploreLocation = ({ image, city, desc, index }) => {
         }}
         className="w-[380px] rounded-md h-[250px] flex items-center justify-center"
       >
-        <div className="flex bg-black/30 h-[90%] rounded-md w-[90%] mx-auto my-auto flex-col items-center text-white text-center">
-          <h1>{city}</h1>
+        <div className="flex bg-black/30 h-[90%] rounded-md w-[90%] mx-auto my-auto flex-col justify-center content-center items-center text-white text-center">
+          <h1 className=" text-[18px] font-medium capitalize">{city}</h1>
           <ul className="flex">
             {desc.map((item, index) => (
-              <li key={index} className="mx-3">{item}</li>
+              <li key={index} className="mx-3  text-white text-[14px]">{item}</li>
             ))}
           </ul>
         </div>

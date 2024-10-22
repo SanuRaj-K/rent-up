@@ -189,3 +189,81 @@ export const exploreLocation = [
     desc: ["20 villas", "15 offices", "5 apartments"],
   },
 ];
+
+export const agents = [
+  {
+    image: "team-1.jpg",
+    place: "Liverpool, Canada",
+    listing: 20,
+    name: "Sargam S. Singh",
+  },
+  {
+    image: "team-2.jpg",
+    place: "New York, USA",
+    listing: 20,
+    name: "Emma J. Watson",
+  },
+  {
+    image: "team-3.jpg",
+    place: "Sydney, Australia",
+    listing: 20,
+    name: "James R. Doe",
+  },
+  {
+    image: "team-4.jpg",
+    place: "Tokyo, Japan",
+    listing: 20,
+    name: "Akira H. Tanaka",
+  },
+  {
+    image: "team-5.jpg",
+    place: "Berlin, Germany",
+    listing: 20,
+    name: "Anna K. Müller",
+  },
+  {
+    image: "team-1.jpg",
+    place: "Cape Town, South Africa",
+    listing: 20,
+    name: "Lebo M. Ndlovu",
+  },
+];
+
+export const pricingPlans = [
+  {
+    plan: "Basic",
+    price: "$29",
+    billingCycle: "per user, per month",
+    features: [
+      { name: "99.5% Uptime Guarantee", available: true },
+      { name: "120GB CDN Bandwidth", available: true },
+      { name: "5GB Cloud Storage", available: true },
+      { name: "Personal Help Support", available: false },
+      { name: "Enterprise SLA", available: false },
+    ],
+  },
+  {
+    plan: "Pro",
+    price: "$49",
+    billingCycle: "per user, per month",
+    features: [
+      { name: "99.9% Uptime Guarantee", available: true },
+      { name: "250GB CDN Bandwidth", available: true },
+      { name: "15GB Cloud Storage", available: true },
+      { name: "Priority Support", available: true },
+      { name: "Enterprise SLA", available: false },
+    ],
+  },
+  {
+    plan: "Enterprise",
+    price: "$99",
+    billingCycle: "per user, per month",
+    features: [
+      { name: "100% Uptime Guarantee", available: true },
+      { name: "Unlimited CDN Bandwidth", available: true },
+      { name: "50GB Cloud Storage", available: true },
+      { name: "Dedicated Support", available: true },
+      { name: "Custom Enterprise SLA", available: true },
+    ],
+  },
+];

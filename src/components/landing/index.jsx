@@ -1,8 +1,10 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import {
+  agents,
   awards,
   exploreLocation,
+  pricingPlans,
   properties,
   propertiesList,
 } from "@/constants";
@@ -10,6 +12,8 @@ import { PropertyTypes } from "../property-types";
 import { PropertyList } from "../property-list";
 import { Award } from "../awards";
 import { ExploreLocation } from "../location";
+import { Agents } from "../agent";
+import { PricingPlans } from "../plans";
 
 export const LandingPage = () => {
   return (
@@ -92,9 +96,9 @@ export const LandingPage = () => {
           ))}
         </ul>
       </section>
-      <section>
+      <section className=" py-20">
         <div className=" text-center  py-16   w-full">
-          <h1 className=" text-[35px]  font-semibold capitalize text-[#2d3954]">
+          <h1 className=" text-[35px]   font-semibold capitalize text-[#2d3954]">
             Recent properties listed
           </h1>
           <p className="  text-[#72809d] max-w-[700px] mx-auto">
@@ -139,16 +143,18 @@ export const LandingPage = () => {
           </ul>
         </div>
       </section>
-      <section>
-        <div>
-          <h1>Explore By Location</h1>
-          <h3>
+      <section className=" px-5 lg:px-0 py-20">
+        <div className=" text-center">
+          <h1 className=" text-black text-[35px] font-semibold">
+            Explore By Location
+          </h1>
+          <h3 className=" max-w-[700px] mx-auto py-03 text-[#72809d]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
           </h3>
         </div>
-        <ul className=" grid grid-cols-3 place-items-center gap-5">
+        <ul className=" grid  py-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-5">
           {exploreLocation?.map((item, index) => (
             <li key={index}>
               <ExploreLocation
@@ -160,6 +166,58 @@ export const LandingPage = () => {
             </li>
           ))}
         </ul>
+      </section>
+      <section className=" px-5 bg-[#f7f9fc] md:px-0">
+        <div className=" py-20">
+          <div className=" text-center">
+            <h1 className=" text-[#2d3954] text-[28px] md:text-[35px] capitalize font-semibold">
+              Our featured agents
+            </h1>
+            <p className=" text-[#72809d] max-w-[700px] mx-auto my-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
+          </div>
+          <div>
+            <ul className="  mt-10  grid grid-cols-1 px-5 md:px-0 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-10 gap-x-5">
+              {agents?.map((item, index) => (
+                <li key={index}>
+                  <Agents
+                    image={item.image}
+                    listing={item.listing}
+                    name={item.name}
+                    place={item.place}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className=" py-20">
+        <div>
+          <div className=" text-center">
+            <h1 className=" text-[60px] font-semibold text-[#2d3954] capitalize">Select your package</h1>
+            <p className=" max-w-[700px] mx-auto text-[#72809d] mb-5">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores
+            </p>
+          </div>
+          <ul className=" grid grid-cols-3 gap-10 place-items-center">
+            {pricingPlans?.map((item, index) => (
+              <li key={index}>
+                <PricingPlans
+                  duration={item.billingCycle}
+                  features={item.features}
+                  price={item.price}
+                  title={item.plan}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </div>
   );
