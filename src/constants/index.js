@@ -232,7 +232,7 @@ export const agents = [
 export const pricingPlans = [
   {
     plan: "Basic",
-    price: "$29",
+    price: "29",
     billingCycle: "per user, per month",
     features: [
       { name: "99.5% Uptime Guarantee", available: true },
@@ -244,7 +244,7 @@ export const pricingPlans = [
   },
   {
     plan: "Pro",
-    price: "$49",
+    price: "49",
     billingCycle: "per user, per month",
     features: [
       { name: "99.9% Uptime Guarantee", available: true },
@@ -256,7 +256,7 @@ export const pricingPlans = [
   },
   {
     plan: "Enterprise",
-    price: "$99",
+    price: "99",
     billingCycle: "per user, per month",
     features: [
       { name: "100% Uptime Guarantee", available: true },

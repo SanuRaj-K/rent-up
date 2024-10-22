@@ -14,6 +14,7 @@ import { Award } from "../awards";
 import { ExploreLocation } from "../location";
 import { Agents } from "../agent";
 import { PricingPlans } from "../plans";
+import ContactBottom from "../contact/ContactBottom";
 
 export const LandingPage = () => {
   return (
@@ -195,7 +196,7 @@ export const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section className=" py-20">
+      <section className=" py-20 px-5 lg:px-0 ">
         <div>
           <div className=" text-center">
             <h1 className=" text-[60px] font-semibold text-[#2d3954] capitalize">Select your package</h1>
@@ -205,7 +206,7 @@ export const LandingPage = () => {
               dolores
             </p>
           </div>
-          <ul className=" grid grid-cols-3 gap-10 place-items-center">
+          <ul className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
             {pricingPlans?.map((item, index) => (
               <li key={index}>
                 <PricingPlans
@@ -218,6 +219,12 @@ export const LandingPage = () => {
             ))}
           </ul>
         </div>
+      </section>
+      <section className="">
+        <div className="  ">
+        <ContactBottom/>
+        </div>
+       
       </section>
     </div>
   );
