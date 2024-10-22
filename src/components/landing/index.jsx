@@ -221,7 +221,7 @@ export const LandingPage = () => {
         </div>
       </section>
       <section className="">
-        <div className="  ">
+        <div className=" py-2  ">
         <ContactBottom/>
         </div>
        
