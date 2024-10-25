@@ -19,7 +19,7 @@ import ContactBottom from "../contact/ContactBottom";
 export const LandingPage = () => {
   return (
     <div>
-      {/* <section className=" pb-36 min-h-screen w-full bg-landing bg-cover bg-no-repeat">
+      <section className=" pb-36 min-h-screen w-full bg-landing bg-cover bg-no-repeat">
         <div className="flex flex-col justify-center items-center h-screen">
           <h1 className=" text-[60px] capitalize  text-white font-semibold">
             search your next home
@@ -74,7 +74,7 @@ export const LandingPage = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
       <section className=" px-10 md:px-0 py-20 bg-[#f7f9fc]">
         <div className=" flex flex-col  items-center w-full mx-auto">
           <h1 className=" text-[35px] font-semibold">
