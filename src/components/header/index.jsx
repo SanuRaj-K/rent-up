@@ -70,19 +70,19 @@ export const NavBar = () => {
 
         {/* Mobile Nav */}
       </section>
-      <div className=" lg:hidden absolute right-0  px-10   bg-primary top-0">
+      <div className=" lg:hidden absolute right-0        w-[50%]  bg-primary top-0">
         {showMenu && (
-          <ul className=" relative  py-5  ">
+          <ul className=" relative   w-full  py-5  ">
             <div
               onClick={() => setShowMenu((prev) => !prev)}
-              className="  w-full absolute top-0 right-0"
+              className="  w-full   flex justify-end p-3 "
             >
               {" "}
               <CloseIcon />
             </div>
             {navLinks.map((item, index) => (
               <Link className="   text-white " href={item.path} key={index}>
-                <li className=" mb-3 border-b-2 capitalize">{item.title}</li>
+                <li className=" pl-3 mb-3 border-b-2 capitalize">{item.title}</li>
               </Link>
             ))}
           </ul>

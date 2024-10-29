@@ -17,11 +17,12 @@ import { Agents } from "../agent";
 import { PricingPlans } from "../plans";
 import ContactBottom from "../contact/ContactBottom";
 import toast from "react-hot-toast";
+import { motion } from "framer-motion";
 
 export const LandingPage = () => {
   return (
-    <div>
-      <section className=" pb-36 min-h-screen w-full bg-landing bg-cover bg-no-repeat">
+    <div className=" overflow-hidden">
+      <section className=" overflow-hidden pb-36 min-h-screen w-full bg-landing bg-cover bg-no-repeat">
         <div className="flex px-5 lg:px-0  flex-col justify-center items-center h-screen">
           <h1 className="  text-[46px] md:text-[60px] capitalize  text-white font-semibold">
             search your next home
@@ -29,7 +30,12 @@ export const LandingPage = () => {
           <h3 className=" text-white text-sm  md:text-[16px]">
             find new & featured property located in your local city
           </h3>
-          <div className=" px-5 py-5 md:my-3  md:fb min-w-[80%] mt-10 rounded-sm bg-white">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className=" px-5 py-5 md:my-3   flex  md:flex-row md:justify-between flex-col min-w-[80%] mt-10 rounded-sm bg-white"
+          >
             <div className="  flex flex-col">
               <label className=" text-[#808080] text-[16px]" htmlFor="city">
                 city/street
@@ -77,7 +83,7 @@ export const LandingPage = () => {
                 <SearchIcon />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className=" px-10 md:px-0 py-20 bg-[#f7f9fc]">
@@ -90,7 +96,7 @@ export const LandingPage = () => {
           </h3>
         </div>
 
-        <ul className=" grid md:grid-cols-2 md:gap-3 lg:grid-cols-4 lg:gap-x-5 xl:grid-cols-5  py-10 place-items-center max-w-[80%] mx-auto  gap-x-0">
+        <ul className="  px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 py-10 md:py-16 lg:place-items-center gap-4">
           {properties.map((item, index) => (
             <li key={index}>
               <PropertyTypes
@@ -160,18 +166,26 @@ export const LandingPage = () => {
             ad minim veniam.
           </h3>
         </div>
-        <ul className=" grid   px-4 py-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:place-items-center gap-5">
-          {exploreLocation?.map((item, index) => (
-            <li key={index}>
-              <ExploreLocation
-                index={index}
-                image={item.image}
-                city={item.title}
-                desc={item.desc}
-              />
-            </li>
-          ))}
-        </ul>
+        <motion.div
+        className=" overflow-hidden"
+          transition={{ duration: 1 }}
+          viewport={false}
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+        >
+          <ul className=" grid    px-4 py-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:place-items-center gap-5">
+            {exploreLocation?.map((item, index) => (
+              <li key={index}>
+                <ExploreLocation
+                  index={index}
+                  image={item.image}
+                  city={item.title}
+                  desc={item.desc}
+                />
+              </li>
+            ))}
+          </ul>
+        </motion.div>
       </section>
       <section className=" px-5 bg-[#f7f9fc] md:px-0">
         <div className=" py-20">
@@ -185,7 +199,13 @@ export const LandingPage = () => {
               enim ad minim veniam.
             </p>
           </div>
-          <div>
+          <motion.div
+         className=" overflow-x-hidden"
+            transition={{ duration: 1 }}
+            viewport={false}
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+          >
             <ul className="  mt-10  grid grid-cols-1 px-5 md:px-0 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-10 gap-x-5">
               {agents?.map((item, index) => (
                 <li key={index}>
@@ -198,7 +218,7 @@ export const LandingPage = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className=" py-20 px-5 lg:px-0 ">

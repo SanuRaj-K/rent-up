@@ -137,22 +137,22 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 export const awards = [
   {
     icon: EmojiEventsIcon,
-    title: "32M",
+    title: "32",
     sub: "Blue Burmin Award",
   },
   {
     icon: BusinessCenterIcon,
-    title: "53M",
+    title: "53",
     sub: "Mimo X11 Award",
   },
   {
     icon: LightbulbIcon,
-    title: "29M",
+    title: "29",
     sub: "Australian UGC Award",
   },
   {
     icon: FavoriteIcon,
-    title: "68M",
+    title: "68",
     sub: "IITCA Green Award",
   },
 ];

@@ -2,11 +2,16 @@ import Image from "next/image";
 import React from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { motion } from "framer-motion";
 
 export const PropertyList = ({ name, address, price, type, status, image }) => {
   return (
     <div>
-      <div className=" shadow-xl px-5 md:px-0 h-[470px] w-[380px]">
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{duration:.3}}
+        className=" shadow-xl px-5 cursor-pointer md:px-0 h-[470px] w-[380px]"
+      >
         <Image
           src={`/assets/images/property/${image}`}
           height={240}
@@ -39,17 +44,20 @@ export const PropertyList = ({ name, address, price, type, status, image }) => {
           </span>
         </div>
         <div className=" py-4">
-        <hr className=" " />
-
+          <hr className=" " />
         </div>
         <div className=" fb items-center mt-5 px-2">
           <span className=" ">
-            <span className="bg-primary px-5 py-3 rounded-3xl  text-sm  md:text-[20px] font-bold text-white">{price}</span>
-            <span className=" text-[#2d3954] text-sm md:text-[16px] ml-1">/sqft</span>
+            <span className="bg-primary px-5 py-3 rounded-3xl  text-sm  md:text-[20px] font-bold text-white">
+              {price}
+            </span>
+            <span className=" text-[#2d3954] text-sm md:text-[16px] ml-1">
+              /sqft
+            </span>
           </span>
           <span>{type}</span>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

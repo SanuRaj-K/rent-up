@@ -17,7 +17,7 @@ const Services = () => {
         </div>
       </section>
       <section>
-        <ul className=" grid md:grid-cols-2 md:gap-3 lg:grid-cols-4 lg:gap-x-5 xl:grid-cols-5  py-10 place-items-center max-w-[80%] mx-auto  gap-x-0">
+        <ul className=" px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 py-10 md:py-16 lg:place-items-center">
           {properties.map((item, index) => (
             <li key={index}>
               <PropertyTypes
