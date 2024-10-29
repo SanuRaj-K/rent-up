@@ -1,3 +1,4 @@
+
 import ContactBottom from "@/components/contact/ContactBottom";
 import { PropertyTypes } from "@/components/property-types";
 import { SectionHeaders } from "@/components/section-headers";
@@ -7,7 +8,7 @@ import React from "react";
 const Services = () => {
   return (
     <div>
-      <section className="  ">
+      {/* <section className="  ">
         <div>
           <SectionHeaders
             desc={"Services -All Services"}
@@ -31,7 +32,8 @@ const Services = () => {
       </section>
       <section>
         <ContactBottom />
-      </section>
+      </section> */}
+      updating
     </div>
   );
 };
