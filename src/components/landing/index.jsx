@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import {
@@ -15,6 +16,7 @@ import { ExploreLocation } from "../location";
 import { Agents } from "../agent";
 import { PricingPlans } from "../plans";
 import ContactBottom from "../contact/ContactBottom";
+import toast from "react-hot-toast";
 
 export const LandingPage = () => {
   return (
@@ -64,7 +66,7 @@ export const LandingPage = () => {
                 id="range"
               />
             </div>
-            <div className=" flex items-center">
+            <div onClick={()=>toast.error('Available Soon...!')} className=" flex items-center">
               <span className=" font-semibold  text-black">
                 Advanced filter
               </span>
@@ -221,7 +223,7 @@ export const LandingPage = () => {
         </div>
       </section>
       <section className="">
-        <div className=" py-2  ">
+        <div className="    ">
         <ContactBottom/>
         </div>
        
