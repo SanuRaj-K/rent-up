@@ -206,7 +206,7 @@ export const LandingPage = () => {
             initial={{ x: 100 }}
             whileInView={{ x: 0 }}
           >
-            <ul className="  mt-10  grid grid-cols-1 px-5 md:px-0 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-10 gap-x-5">
+            <ul className="  mt-9  grid grid-cols-1 px-5 md:px-0 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-10 gap-x-5">
               {agents?.map((item, index) => (
                 <li key={index}>
                   <Agents
