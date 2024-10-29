@@ -8,7 +8,7 @@ import React from "react";
 const Services = () => {
   return (
     <div>
-      {/* <section className="  ">
+      <section className="  ">
         <div>
           <SectionHeaders
             desc={"Services -All Services"}
@@ -32,8 +32,7 @@ const Services = () => {
       </section>
       <section>
         <ContactBottom />
-      </section> */}
-      updating
+      </section>
     </div>
   );
 };

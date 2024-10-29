@@ -17,9 +17,6 @@ import { Agents } from "../agent";
 import { PricingPlans } from "../plans";
 import ContactBottom from "../contact/ContactBottom";
 import toast from "react-hot-toast";
-import { motion } from "framer-motion";
-import dynamic from 'next/dynamic';
-
 
 export const LandingPage = () => {
   return (
@@ -32,10 +29,7 @@ export const LandingPage = () => {
           <h3 className=" text-white text-sm  md:text-[16px]">
             find new & featured property located in your local city
           </h3>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+          <div
             className=" px-5 py-5 md:my-3   flex  md:flex-row md:justify-between flex-col min-w-[80%] mt-10 rounded-sm bg-white"
           >
             <div className="  flex flex-col">
@@ -85,7 +79,7 @@ export const LandingPage = () => {
                 <SearchIcon />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
       <section className=" px-10 md:px-0 py-20 bg-[#f7f9fc]">
@@ -168,12 +162,9 @@ export const LandingPage = () => {
             ad minim veniam.
           </h3>
         </div>
-        <motion.div
-        className=" overflow-hidden"
-          transition={{ duration: 1 }}
-          viewport={false}
-          initial={{ x: -100 }}
-          whileInView={{ x: 0 }}
+        <div
+          className=" overflow-hidden"
+          
         >
           <ul className=" grid    px-4 py-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:place-items-center gap-5">
             {exploreLocation?.map((item, index) => (
@@ -187,7 +178,7 @@ export const LandingPage = () => {
               </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
       </section>
       <section className=" px-5 bg-[#f7f9fc] md:px-0">
         <div className=" py-20">
@@ -201,12 +192,9 @@ export const LandingPage = () => {
               enim ad minim veniam.
             </p>
           </div>
-          <motion.div
-         className=" overflow-x-hidden"
-            transition={{ duration: 1 }}
-            viewport={false}
-            initial={{ x: 100 }}
-            whileInView={{ x: 0 }}
+          <div
+            className=" overflow-x-hidden"
+             
           >
             <ul className="  mt-9  grid grid-cols-1 px-5 md:px-0 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-10 gap-x-5">
               {agents?.map((item, index) => (
@@ -220,7 +208,7 @@ export const LandingPage = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
       </section>
       <section className=" py-20 px-5 lg:px-0 ">

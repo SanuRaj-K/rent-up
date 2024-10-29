@@ -2,16 +2,11 @@ import Image from "next/image";
 import React from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { motion } from "framer-motion";
 
 export const PropertyList = ({ name, address, price, type, status, image }) => {
   return (
     <div>
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{duration:.3}}
-        className=" shadow-xl px-5 cursor-pointer md:px-0 h-[470px] w-[380px]"
-      >
+      <div className=" shadow-xl px-5 cursor-pointer md:px-0 h-[470px] w-[380px]">
         <Image
           src={`/assets/images/property/${image}`}
           height={240}
@@ -57,7 +52,7 @@ export const PropertyList = ({ name, address, price, type, status, image }) => {
           </span>
           <span>{type}</span>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
