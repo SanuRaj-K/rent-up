@@ -16,8 +16,8 @@ export const PricingPlans = ({ title, price, duration, features }) => {
           </div>
           <span className=" text-[18px] md:text-[22px]  font-bold">{title}</span>
           <span className="">
-            <span className=" text-[30px] font-medium">$</span>
-            <span className="  text-[40px] md:text-[60px] ml-1 font-bold">{price}</span>
+            <span className=" text-[24px] md:text-[30px] font-medium">$</span>
+            <span className="  text-[30px] sm:text-[40px] md:text-[60px] ml-1 font-bold">{price}</span>
             
           </span>
           <span>{duration}</span>
@@ -35,13 +35,13 @@ export const PricingPlans = ({ title, price, duration, features }) => {
                 >
                   {item.available ? <DoneIcon /> : <ClearIcon />}
                 </span>
-                <span className=" pl-5">{item.name}</span>
+                <span className="  text-[14px] md:text-[16px] pl-5">{item.name}</span>
               </li>
             ))}
           </ul>
         </div>
         <div className="   px-5  py-7">
-          <div className=" text-[20px] font-medium  text-primary hover:text-white hover:bg-primary hover:border-none transition-all duration-300 text-center py-5  border-[#E5F5EC] border-[5px] rounded-full">
+          <div className=" text-[16px] md:text-[20px] font-medium  text-primary hover:text-white hover:bg-primary hover:border-none transition-all duration-300 text-center py-5  border-[#E5F5EC] border-[5px] rounded-full">
             start {title}
           </div>
         </div>

@@ -3,7 +3,7 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 export const Award = ({ title, sub, icon: Icon }) => {
   return (
-    <div className=" flex flex-col items-center">
+    <div className=" w-full flex flex-col items-center">
       <div className=" bg-[#2A3F5A] p-10   rounded-tr-[50%] rounded-bl-[50%]">
         {Icon && <Icon style={{ fontSize: 40 }} />}
       </div>

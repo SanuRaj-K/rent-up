@@ -12,7 +12,7 @@ import DoneIcon from '@mui/icons-material/Done';
 export const Agents = ({ image, place, name, listing }) => {
   return (
     <div>
-      <div className="  bg-white hover:shadow-2xl hover:border-none transition-all duration-300 p-[20px] border-2  w-[380px] rounded-md">
+      <div className="  bg-white hover:shadow-2xl hover:border-none transition-all duration-300 p-[20px] border-2  w-full md:w-[380px] rounded-md">
         <div className=" text-white inline-block rounded-3xl px-7 py-3 font-semibold  text-sm bg-[#ff6922]">
           {listing} Listing
         </div>
@@ -63,7 +63,7 @@ export const Agents = ({ image, place, name, listing }) => {
           </div>
         </div>
         <div className=" text-white fb">
-          <div className="  cursor-pointer flex items-center  rounded-md bg-primary px-4 py-2">
+          <div className="  mr-3  md:mr-0 cursor-pointer flex items-center  rounded-md bg-primary px-4 py-2">
             <span>
               <EmailIcon />
             </span>

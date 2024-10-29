@@ -6,26 +6,29 @@ import React, { useState } from "react";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+
 export const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="  relative  w-full px-10 md:px-0 md:max-w-[80%]  mx-auto bg-white">
-      <section className=" text-base  capitalize text-black font-medium py-5 fb items-center">
+    <div className="    sticky top-0      w-full rounded-md md:px-0 md:max-w-[80%]  mx-auto bg-white">
+      <section className=" text-base  px-2  w-full capitalize text-black font-medium py-4  shadow-lg fb items-center">
         <div>
-          <Image
-            className=" hidden md:block cursor-pointer"
-            src={"/assets/icons/logo.png"}
-            alt="logo"
-            height={50}
-            width={150}
-          />
-          <Image
-            className=" md:hidden block cursor-pointer"
-            src={"/assets/icons/logo.png"}
-            alt="logo"
-            height={20}
-            width={50}
-          />
+          <Link href={"/"}>
+            <Image
+              className=" hidden md:block cursor-pointer"
+              src={"/assets/icons/logo.png"}
+              alt="logo"
+              height={50}
+              width={150}
+            />
+            <Image
+              className=" md:hidden block cursor-pointer"
+              src={"/assets/icons/logo.png"}
+              alt="logo"
+              height={20}
+              width={50}
+            />
+          </Link>
         </div>
         <div className=" hidden lg:block">
           <ul className="  fb  items-center ">
@@ -40,22 +43,28 @@ export const NavBar = () => {
           </ul>
         </div>
         <div className=" hidden lg:block">
-          <ul className=" fb  items-center">
-            <li className=" pr-5">
-              <span className=" p-1  text-white bg-primary rounded-full">
-                2
-              </span>
+          <ul className=" flex items-center">
+            <li className="   flex items-center pr-5">
+              <div className="  size-5 flex items-center justify-center bg-primary text-white rounded-full">
+                <span className=" text-[10px] p-1">2</span>
+              </div>
               <span className=" ml-2">My list</span>
             </li>
-            <li className=" cursor-pointer group  text-white bg-primary rounded-md px-8 py-4">
-              <ExitToAppIcon />
+            <li className="  flex   cursor-pointer group  text-white bg-primary rounded-md px-8 py-2">
+              <div className=" mr-2 size-5">
+                <ExitToAppIcon />
+              </div>
+
               <span className=" group-hover:text-black transition-all duration-300">
                 Sign in
               </span>
             </li>
           </ul>
         </div>
-        <div className=" block lg:hidden" onClick={() => setShowMenu((prev) => !prev)}>
+        <div
+          className="  block lg:hidden"
+          onClick={() => setShowMenu((prev) => !prev)}
+        >
           {showMenu ? <CloseIcon /> : <MenuIcon />}
         </div>
 
