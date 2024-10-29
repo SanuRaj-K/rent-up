@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import dynamic from "next/dynamic";
 import SearchIcon from "@mui/icons-material/Search";
 import {
   agents,
@@ -12,14 +11,15 @@ import {
 } from "@/constants";
 import { PropertyTypes } from "../property-types";
 import { PropertyList } from "../property-list";
-const Award = dynamic(() => import("../awards"), { ssr: false });
-
+import { Award } from "../awards";
 import { ExploreLocation } from "../location";
 import { Agents } from "../agent";
 import { PricingPlans } from "../plans";
 import ContactBottom from "../contact/ContactBottom";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
+import dynamic from 'next/dynamic';
+
 
 export const LandingPage = () => {
   return (
@@ -150,7 +150,7 @@ export const LandingPage = () => {
               const IconComp = item.icon;
               return (
                 <li className="mb-5 mx-10 md:mb-0" key={index}>
-                  <Award  title={item.title} sub={item.sub} icon={IconComp} />
+                  <Award title={item.title} sub={item.sub} icon={IconComp} />
                 </li>
               );
             })}
@@ -169,7 +169,7 @@ export const LandingPage = () => {
           </h3>
         </div>
         <motion.div
-          className=" overflow-hidden"
+        className=" overflow-hidden"
           transition={{ duration: 1 }}
           viewport={false}
           initial={{ x: -100 }}
@@ -202,7 +202,7 @@ export const LandingPage = () => {
             </p>
           </div>
           <motion.div
-            className=" overflow-x-hidden"
+         className=" overflow-x-hidden"
             transition={{ duration: 1 }}
             viewport={false}
             initial={{ x: 100 }}
