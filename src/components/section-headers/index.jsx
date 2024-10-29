@@ -15,9 +15,9 @@ export const SectionHeaders = ({ image, title, desc }) => {
             alt="bg"
           />
         </div>{" "}
-        <div className=" text-white z-40 left-[150px] absolute top-[100px]">
+        <div className=" text-white text-center md:text-start z-40 md:left-[150px] absolute top-[100px]">
           <h3 className=" text-[16px] mb-3">{title}</h3>
-          <h1 className=" text-[40px] font-medium">{desc}</h1>
+          <h1 className="  text-[30px] ml-10 md:ml-0 md:text-[40px] font-medium">{desc}</h1>
         </div>
       </section>
       <section></section>
