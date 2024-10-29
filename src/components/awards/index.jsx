@@ -29,7 +29,7 @@ export const Award = ({ title, sub, icon: Icon }) => {
         {Icon && <Icon style={{ fontSize: 40 }} />}
       </div>
       <div className="text-center">
-        <h1 className="text-[24px] md:text-[36px] lg:text-[50px] font-bold">
+        <h1 className="text-[22px] md:text-[36px] lg:text-[50px] font-bold">
           {count}M
         </h1>
         <h3 className="text-[#808080]">{sub}</h3>
