@@ -6,9 +6,11 @@ import React, { useState } from "react";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { useSelector } from "react-redux";
 
 export const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const loginStatus = useSelector((state) => state.auth.loginStatus);
   return (
     <div className="    sticky top-0      w-full rounded-md md:px-0 md:max-w-[80%]  mx-auto bg-white">
       <section className=" text-base  px-2  w-full capitalize text-black font-medium py-4  shadow-lg fb items-center">
@@ -50,14 +52,27 @@ export const NavBar = () => {
               </div>
               <span className=" ml-2">My list</span>
             </li>
-            <li className="  flex   cursor-pointer group  text-white bg-primary rounded-md px-8 py-2">
-              <div className=" mr-2 size-5">
-                <ExitToAppIcon />
-              </div>
+            <li className="    cursor-pointer group  text-white bg-primary rounded-md px-8 py-2">
+              {loginStatus ? (
+                <>
+                  <Link href={'/account'}>
+                    <span>Account</span>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <Link className=" flex" href={"/login"}>
+                    <div className=" mr-2 size-5">
+                      <ExitToAppIcon />
+                    </div>
 
-              <span className=" group-hover:text-black transition-all duration-300">
-                Sign in
-              </span>
+                    <span className=" group-hover:text-black transition-all duration-300">
+                      Sign in
+                    </span>
+                  </Link>
+                </>
+              )}
             </li>
           </ul>
         </div>
@@ -82,7 +97,9 @@ export const NavBar = () => {
             </div>
             {navLinks.map((item, index) => (
               <Link className="   text-white " href={item.path} key={index}>
-                <li className=" pl-3 mb-3 border-b-2 capitalize">{item.title}</li>
+                <li className=" pl-3 mb-3 border-b-2 capitalize">
+                  {item.title}
+                </li>
               </Link>
             ))}
           </ul>
